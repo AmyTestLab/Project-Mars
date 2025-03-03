@@ -75,11 +75,11 @@ namespace SpecFlowProjectMars.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("A.Verify user is able to add Skill in Skills tab in the profile page")]
-        [NUnit.Framework.TestCaseAttribute("Python", "Intermediate", null)]
         [NUnit.Framework.TestCaseAttribute("C++", "Beginner", null)]
         [NUnit.Framework.TestCaseAttribute("", "Choose Skill Level", null)]
         [NUnit.Framework.TestCaseAttribute("Communication", "Expert", null)]
         [NUnit.Framework.TestCaseAttribute("SQL", "Intermediate", null)]
+        [NUnit.Framework.TestCaseAttribute("Python", "Intermediate", null)]
         public virtual void A_VerifyUserIsAbleToAddSkillInSkillsTabInTheProfilePage(string skill, string level, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

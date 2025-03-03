@@ -11,11 +11,11 @@ Scenario Outline: A.Verify user is able to add Skill in Skills tab in the profil
 
 Examples:
 	| Skill         | Level              |
-    | Python        | Intermediate       |
 	| C++           | Beginner           |
 	|               | Choose Skill Level |
 	| Communication | Expert             |
 	| SQL           | Intermediate       |
+    | Python        | Intermediate       |
 
 
 Scenario Outline: B.Verify user is able to edit Skill in Skills tab in the profile page

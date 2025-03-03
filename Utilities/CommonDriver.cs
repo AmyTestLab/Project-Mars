@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace SpecFlowProjectMars.Utilities
 {
@@ -15,9 +16,15 @@ namespace SpecFlowProjectMars.Utilities
         {
             driver= new ChromeDriver();
             driver.Manage().Window.Maximize();
-           driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+         
 
-
+        }
+       
+        [TearDown]
+        public void CloseTestrun()
+        {
+            driver.Quit();
         }
     }
 }

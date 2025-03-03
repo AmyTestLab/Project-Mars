@@ -15,12 +15,12 @@ namespace SpecFlowProjectMars.Utilities
         [BeforeScenario]
         public void Setup()
         {
-            BrowserSetup();
+            BrowserSetup(); // Sets up the browser for the test
         }
         [AfterScenario]
         public void CloseTestRun()
         {
-            driver.Quit();
+            driver.Quit(); // Close the browser after the test
         }
     }
 }

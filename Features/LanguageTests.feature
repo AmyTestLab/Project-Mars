@@ -11,6 +11,7 @@ Scenario Outline: A.Verify user is able to add language in Languages tab in the 
 
 Examples:
     | Language    | Level                 |
+	| Italian     | Basic                 |
 	| German      | Choose Language Level |
 	| @#Language  | Basic                 |
 	|             | Choose language level |
