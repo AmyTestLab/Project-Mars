@@ -34,9 +34,9 @@ namespace SpecFlowProjectMars.Pages
                     button.Click();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                // In case of any exception, nothing is done, just continue
+                Console.WriteLine($"Error clearing skills: {ex.Message}");
             }
         }
 
@@ -68,6 +68,19 @@ namespace SpecFlowProjectMars.Pages
         public void RemoveSkill()
         {           
             deleteSkillButton.Click(); // Click on the "Delete" button for the skill
+        }
+        // Before each scenario: Clear all skills to ensure a clean state
+        [BeforeScenario]
+        public void Setup()
+        {
+            ClearData();
+        }
+
+        // After each scenario: Cleanup any skill added during the test
+        [AfterScenario]
+        public void Cleanup()
+        {
+            RemoveSkill(); // Adjust this based on the skill you expect to add during the test
         }
     }
 }

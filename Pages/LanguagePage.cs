@@ -121,5 +121,21 @@ namespace SpecFlowProjectMars.Pages
                 Console.WriteLine($"Error occurred while removing language: {ex.Message}");
             }
         }
+
+
+        // Before each scenario: Clear all languages to ensure a clean state
+
+        [BeforeScenario]
+        public void Setup()
+        {
+            ClearData();
+
+        }
+        // After each scenario: Cleanup any language added during the test
+        [AfterScenario]
+        public void Cleanup()
+        {
+            RemoveLanguage();
+        }
     }
 }
